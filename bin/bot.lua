@@ -1,5 +1,5 @@
-bot = dofile('../data/utils.lua')
-json = dofile('../data/JSON.lua')
+bot = dofile('utils.lua')
+json = dofile('../JSON.lua')
 URL = require "socket.url"
 serpent = require("serpent")
 http = require "socket.http"
@@ -7,9 +7,9 @@ https = require "ssl.https"
 redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
 BASE = '../bot/'
-SUDO = 180191663 --sudo id
-sudo_users = {158955285,180191663,279700027,421738649,userid}
-BOTS = 421738649 --bot id
+SUDO = 66488544 --sudo id
+sudo_users = {66488544,158955285,180191663,391052362,userid}
+BOTS = 391052362 --bot id
 bot_id = db:get(SUDO..'bot_id')
 function vardump(value)
   print(serpent.block(value, {comment=false}))
@@ -39,7 +39,7 @@ end
 end
 ------------------------------------------------------------
 function is_bot(msg)
-  if tonumber(BOTS) == 421738649 then
+  if tonumber(BOTS) == 391052362 then
     return true
     else
     return false
@@ -875,7 +875,7 @@ end
             end
           tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 390415004,
+      bot_user_id_ = 391052362,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
