@@ -8,8 +8,8 @@ redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
 BASE = '../bot/'
 SUDO = 66488544 --sudo id
-sudo_users = {66488544,158955285,180191663,391052362,userid}
-BOTS = 391052362 --bot id
+sudo_users = {66488544,158955285,180191663,400674938,userid}
+BOTS = 400674938 --bot id
 bot_id = db:get(SUDO..'bot_id')
 function vardump(value)
   print(serpent.block(value, {comment=false}))
@@ -39,7 +39,7 @@ end
 end
 ------------------------------------------------------------
 function is_bot(msg)
-  if tonumber(BOTS) == 391052362 then
+  if tonumber(BOTS) == 400674938 then
     return true
     else
     return false
